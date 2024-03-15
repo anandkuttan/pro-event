@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        /* Additional inline styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #555;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #fff; /* Background color for input fields */
+        }
+        .button {
+            text-align: center;
+        }
+        .button input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .alert {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            color: #721c24;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Login </h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label class="form-label">USER NAME</label>
+            <input type="text" class="form-control" name="username" placeholder="Enter the username">
+       
+        <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Enter the password">
+        </div>
+        
+        <div class="button">
+            <input type="submit" name="submit" value="Login">
+        </div>
+    </form>
+    {% for message in messages %}
+    <div class="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+    
+</div>
+
+</body>
+</html>

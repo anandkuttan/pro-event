@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="">
+        <h1 style="color: black;">Welcome to Global Event Management</h1>
+    </div><br><br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>About Us</h2>
+            <p style="color: black;">At Global Event Management, we specialize in curating unforgettable experiences for a diverse range of occasions across the globe. Our team is dedicated to orchestrating seamless events that exceed expectations and leave a lasting impression on every guest.</p>
+        </div>
+        
+        <div class="col-md-6">
+            <h2>Our Services</h2>
+            <ul>
+                <li><strong>Weddings:</strong> From intimate ceremonies to grand celebrations...</li>
+                <li><strong>Birthdays:</strong> Every birthday is a milestone worth celebrating...</li>
+                <li><strong>Corporate Events:</strong> From corporate conferences and product launches...</li>
+                <li><strong>Catering:</strong> Exceptional cuisine is an integral part of any memorable event...</li>
+            </ul>
+        </div>
+
+        <!-- Insert the Contact Us section here -->
+        <div class="col-md-6">
+            <h2>Contact</h2>
+            <p style="color: black;">Ready to start planning your next event? Contact us today to discuss your vision and let us bring it to life!</p>
+            <p style="color: black;"><strong>Phone:</strong> [Insert Phone Number]</p>
+            <p style="color: black;"><strong>Email:</strong> [Insert Email Address]</p>
+            <p style="color: black;"><strong>Website:</strong> [Insert Website URL]</p>
+            <p style="color: black;">Follow us on social media for the latest updates and inspiration!</p>
+            <p style="color: black;"><strong>Facebook:</strong> [Insert Facebook Page Link]</p>
+            <p style="color: black;"><strong>Instagram:</strong> [Insert Instagram Page Link]</p>
+        </div>
+        
+    </div>
+
+    
+        <div class="col-md-6">
+            <!-- Add an attractive image or video here -->
+        </div>
+    </div>
+    
+</div>
+
+<style>
+    .jumbotron {
+        background-color: #f8f9fa;
+        padding: 100px 0;
+        margin-bottom: 0;
+    }
+
+    .jumbotron h1 {
+        color: #000; /* Black color */
+    }
+
+    .lead {
+        color: #000; /* Black color */
+    }
+
+    .img-fluid {
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        color: #000; /* Black color */
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        color: #000; /* Black color */
+    }
+</style>
+
+{% endblock %}

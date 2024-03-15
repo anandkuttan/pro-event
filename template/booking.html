@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Booking
+{% endblock %}
+
+{% block content %}
+
+<style>
+    
+    form p {
+        color: blue; /* Blue color for paragraphs inside the form */
+        font-size: 14px; /* Adjust font size */
+        margin-bottom: 10px; /* Add some space below each paragraph */
+    }
+
+
+
+    .btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+
+
+
+ /* Style for the heading */
+ h1 {
+        text-align: center;
+        font-size: 36px; /* Adjust font size */
+        color: #4CAF50; /* Green color */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+        animation: pulse 2s infinite alternate; /* Add a pulsating animation */
+    }
+
+    /* Keyframes for the pulsating animation */
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+
+ 
+
+
+
+
+
+
+
+
+</style>
+
+<div class="container p-3 text-center">
+    <h1>Book Your Events</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn">Book Now</button>
+</form>
+</div>
+{% endblock %}
